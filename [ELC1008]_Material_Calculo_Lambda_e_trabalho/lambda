@@ -1,0 +1,21 @@
+(App
+	 (Abs 'x'
+ 		(Abs 'y' 
+ 			(App
+ 				 (Var 'x') 
+ 				 (Abs 'x'
+ 				 	(App 
+ 				 		(Var 'x')
+ 				 		(Var 'y')
+ 				 	)
+ 				 )
+ 			)
+ 	 	)
+	 	
+	 )
+	(Var 'y')
+)
+(App (Abs 'x' (Abs 'y' (App (Var 'x')(Abs 'x'(App (Var 'x')(Var 'y'))))))(Var 'y'))
+
+
+App (Var 'x') (Var 'y')
