@@ -1,0 +1,14 @@
+Exemplo de Renomeação 1 de entrada:
+	findAndRenameVar (parserlamb(lexer("((lam x . (lam y . xy)) y)")))
+
+Saída:
+	App (Abs 'x' (Abs 'a' (App (Var 'x') (Var 'a')))) (Var 'y')
+
+
+
+Exemplo de Renomeação 2 de entrada:
+	findAndRenameVar (parserlamb(lexer("((lam x . (lam y . (x ( lam x . xy)))) y)")))
+
+Saída:
+	App (Abs 'x' (Abs 'a' (App (Var 'x') (Abs 'x' (App (Var 'x') (Var 'a')))))) (Var 'y')
+

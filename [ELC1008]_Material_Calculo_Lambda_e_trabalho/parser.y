@@ -34,7 +34,8 @@ parseError b = error "Parse Error"
 
 data TLam = Var Char
            | Abs Char TLam
-           | App TLam TLam deriving Show 
+           | App TLam TLam
+    deriving Show 
 
 data Token 
 		= TokenVar Char
@@ -56,7 +57,5 @@ lexer ('.':cs) = TokenPoint : lexer cs
 
 areEqual :: String -> String -> Bool
 areEqual a b = a == b
-
-main = getContents >>= print . parserlamb .lexer
 
 }
