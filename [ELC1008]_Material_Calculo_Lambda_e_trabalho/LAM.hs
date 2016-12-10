@@ -1,9 +1,9 @@
 module LAM where
 import ParserLambda
 
-data TLam = Var Char
-           | Abs Char TLam
-           | App TLam TLam deriving Show 
+--data TLam = Var Char
+ --          | Abs Char TLam
+  --         | App TLam TLam deriving Show 
 
 
 remove :: Char -> [Char] -> [Char]
